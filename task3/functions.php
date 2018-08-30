@@ -7,23 +7,23 @@ function triangleGen($sum) # Функция для соблюдения нера
 }
 function triangleArea ($x, $y, $z)  # Функция для вычисления площадей граней пирамиды
 {
-    $p = ($x + $y + $z)/2;
+    $p = ($x + $y + $z) / 2;
     return sqrt($p * ($p - $x) * ($p - $y) * ($p - $z));
 }
 
 function gen() # Функция для генерации случайных фигур
 {
-    $i = rand(0,2);
+    $i = rand(0, 2);
     switch ($i) {
         case 0:
-            return new Circle(rand(1,100));
+            return new Circle(rand(1, 100));
         case 1:
-            return new Rectangle(rand(1,100), rand(1,100));
+            return new Rectangle(rand(1, 100), rand(1, 100));
         case 2:
             # В случае пирамиды планировалось проверять возможность построения данной фигуры, однако нижеприведенный код этого не достигает
-            $x = rand(1,100);
-            $y = rand(1,100);
-            $z = rand(1,100);
+            $x = rand(1, 100);
+            $y = rand(1, 100);
+            $z = rand(1, 100);
             $base_x = triangleGen($x + $y);
             $base_y = triangleGen($y + $z);
             $base_z = triangleGen($x + $z);
