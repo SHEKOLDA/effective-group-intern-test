@@ -13,15 +13,23 @@ $array = array();
 for ($i = 0; $i < 20; $i++) {
     array_push($array, gen());
 }
-saveArr($array);
-$array = loadArr();
+
 print_r($array);
 echo "<br/>","<br/>";
+
+saveArr($array);
+$array = loadArr();
+
+print_r($array);
+echo "<br/>","<br/>";
+
 print_r(array_map("area", $array));
 echo "<br/>","<br/>";
+
 $array = sortByArea($array);
 print_r($array);
 echo "<br/>","<br/>";
+
 print_r(array_map("area", $array));
 
 ?>
