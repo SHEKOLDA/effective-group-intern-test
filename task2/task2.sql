@@ -7,7 +7,7 @@
 create table authors_n_books (author_name varchar(20), book_name varchar(100));
 
 -- Тестовые данные хранятся в файле library.csv
-copy authors_n_books from 'path\to\test-data\library.csv' delimiter ',' csv header;
+copy authors_n_books from 'library.csv' delimiter ',' csv header;
 select * from authors_n_books;
 
 /*  Поскольку имя автора в таблице повторяется столько раз, сколько книг он написал, для выполнения задания необходимо будет 
